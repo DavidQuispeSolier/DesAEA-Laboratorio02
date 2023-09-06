@@ -1,0 +1,31 @@
+﻿<Window x:Class="Laboratorio02.Listacon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorio02"
+        mc:Ignorable="d"
+        Title="Listacon" Height="450" Width="800">
+   <Grid>
+        <!-- Encabezado -->
+        <TextBlock Text="Lista de Conductores" FontSize="24" FontWeight="Bold" Margin="10"/>
+
+        <!-- Lista de Conductores -->
+        <ListView Name="lstConductores" Margin="10,50,10,70">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Nombre Conductor" Width="200" DisplayMemberBinding="{Binding Nombre}"/>
+                    <GridViewColumn Header="Licencia" Width="150" DisplayMemberBinding="{Binding Licencia}"/>
+                    <GridViewColumn Header="Transporte" Width="150" DisplayMemberBinding="{Binding Transporte}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Botones -->
+        <!--<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,10">
+            <Button Content="Nuevo Conductor" Width="150" Click="NuevoConductor_Click" Margin="10"/>
+            <Button Content="Editar Conductor" Width="150" Click="EditarConductor_Click" Margin="10"/>
+            <Button Content="Eliminar Conductor" Width="150" Click="EliminarConductor_Click" Margin="10"/>
+        </StackPanel>-->
+    </Grid>
+</Window>

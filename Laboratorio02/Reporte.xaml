@@ -1,0 +1,35 @@
+﻿<Window x:Class="Laboratorio02.Reporte"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorio02"
+        mc:Ignorable="d"
+        Title="Reporte" Height="450" Width="800">
+    <Grid Background="#F0F0F0">
+        <!-- Encabezado -->
+        <StackPanel Background="#007ACC" VerticalAlignment="Top" Height="80">
+            <TextBlock Text="Listado de Ingresos" FontSize="28" FontWeight="Bold" Foreground="White" Margin="10"/>
+        </StackPanel>
+
+        <!-- Lista de Ingresos -->
+        <ListView Name="lstIngresos" Margin="10,100,10,120" Background="White" BorderBrush="#007ACC" BorderThickness="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Fecha" Width="100" DisplayMemberBinding="{Binding Fecha}"/>
+                    <GridViewColumn Header="Placa" Width="100" DisplayMemberBinding="{Binding Placa}"/>
+                    <GridViewColumn Header="Turno" Width="100" DisplayMemberBinding="{Binding Turno}"/>
+                    <GridViewColumn Header="Conductor" Width="150" DisplayMemberBinding="{Binding Conductor}"/>
+                    <GridViewColumn Header="Producto" Width="150" DisplayMemberBinding="{Binding Producto}"/>
+                    <GridViewColumn Header="Peso" Width="100" DisplayMemberBinding="{Binding Peso}"/>
+                    <GridViewColumn Header="Transporte" Width="150" DisplayMemberBinding="{Binding Transporte}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Botón de Búsqueda -->
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10">
+            <!--<Button Content="Buscar" Width="100" Height="40" Background="#007ACC" Foreground="White" BorderBrush="#007ACC" BorderThickness="1" Click="Buscar_Click"/>-->
+        </StackPanel>
+    </Grid>
+</Window>

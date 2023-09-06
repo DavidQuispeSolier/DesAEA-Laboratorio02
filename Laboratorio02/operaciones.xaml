@@ -1,0 +1,77 @@
+﻿<Window x:Class="Laboratorio02.operaciones"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorio02"
+        mc:Ignorable="d"
+        Title="operaciones" Height="450" Width="800">
+    <Window.Resources>
+        <!-- Estilo para los labels -->
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 5"/>
+        </Style>
+
+        <!-- Estilo para los campos de texto y combobox -->
+        <Style TargetType="Control" x:Key="InputFieldStyle">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 5"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="MinWidth" Value="200"/>
+        </Style>
+
+        <!-- Estilo para el botón -->
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="0 10"/>
+            <Setter Property="Padding" Value="10 2"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+    </Window.Resources>
+    <Grid Background="#F0F0F0">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label VerticalAlignment="Center" Content="Registro de Ingresos" FontSize="24" FontWeight="Bold"/>
+
+            <!-- Tipo de Documento -->
+            <Label Content="Tipo de Documento"/>
+            <ComboBox Name="cmbTipoDocumento" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Número de Documento -->
+            <Label Content="Número de Documento"/>
+            <TextBox Name="txtNumeroDocumento" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Placa -->
+            <Label Content="Placa"/>
+            <TextBox Name="txtPlaca" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Turno -->
+            <Label Content="Turno"/>
+            <ComboBox Name="cmbTurno" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Nombre del Conductor -->
+            <Label Content="Nombre del Conductor"/>
+            <TextBox Name="txtNombreConductor" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Nombre del Cliente -->
+            <Label Content="Nombre del Cliente"/>
+            <TextBox Name="txtNombreCliente" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Fecha y Hora -->
+            <Label Content="Fecha y Hora"/>
+            <DatePicker Name="dpFechaHora" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Peso de Ingreso -->
+            <Label Content="Peso de Ingreso"/>
+            <TextBox Name="txtPesoIngreso" Style="{StaticResource InputFieldStyle}"/>
+
+            <!-- Botón de guardar -->
+            <Button Content="Guardar" Click="GuardarIngreso_Click" Style="{StaticResource ButtonStyle}"/>
+        </StackPanel>
+    </Grid>
+</Window>

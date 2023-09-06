@@ -1,0 +1,35 @@
+﻿<Window x:Class="Laboratorio02.Registrocon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratorio02"
+        mc:Ignorable="d"
+        Title="Registrocon" Height="450" Width="800">
+    <Grid Background="#E0E0E0">
+        <Border BorderBrush="#007ACC" BorderThickness="1" CornerRadius="5" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Registro de Conductores" FontSize="20" FontWeight="Bold" Margin="10" HorizontalAlignment="Center" Grid.Row="0"/>
+                <StackPanel Margin="20" Grid.Row="1">
+                    <TextBlock Text="Nombre del Conductor:" FontWeight="Bold"/>
+                    <TextBox Name="txtNombreConductor" Width="250" Margin="0 5"/>
+                </StackPanel>
+                <StackPanel Margin="20" Grid.Row="2">
+                    <TextBlock Text="Licencia:" FontWeight="Bold"/>
+                    <TextBox Name="txtLicencia" Width="250" Margin="0 5"/>
+                </StackPanel>
+                <StackPanel Margin="20" Grid.Row="3">
+                    <TextBlock Text="Transporte:" FontWeight="Bold"/>
+                    <TextBox Name="txtTransporte" Width="250" Margin="0 5"/>
+                </StackPanel>
+                <!--<Button Content="Guardar" Width="100" Margin="20" Click="GuardarConductor_Click" HorizontalAlignment="Right" Grid.Row="4"/>-->
+            </Grid>
+        </Border>
+    </Grid>
+</Window>
